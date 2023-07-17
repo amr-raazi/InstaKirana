@@ -1,0 +1,49 @@
+{% include 'nav.html' %}
+{% extends 'base.html' %}
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{{  url_for('static', filename='/cart.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="cart-item-body">
+    {% set total = namespace(value=0) %}
+
+    {% for id, qty in session["qty_dict"].items() %}
+    {% if qty != 0 %}
+    <div class="cart-item">
+        <img class="product-image" src="{{ url_for('static', filename="images/products/" ~id~ ".png") }}">
+        <span class="product-name product-text">{{ session["items"][id | int]["name"] }}</span>
+        <div class="product-size-price">
+            <span class="product-size product-text">{{ session["items"][id | int]["size"] }}</span>
+            <span class="product-price product-text">₹ {{ session["items"][id | int]["price"] }}</span>
+        </div>
+        <form method="POST">
+            <span class="product-qty-text product-text">Quantity:</span>
+            <button class="decrement-button" value="{{id}}" name="decrement" type="submit">-</button>
+            <span class="product-qty product-text">  {{qty}}</span>
+            <button class="increment-button" value="{{id}}" name="increment" type="submit">+</button>
+        </form>
+        {% set total.value = (total.value + ( qty * session["items"][id | int]["price"] ) ) %}
+        <span class="product-text total">Total:   ₹{{ qty * session["items"][id | int]["price"]}}</span>
+        {% endif %}
+    </div>
+    {% endfor %}
+</div>
+
+<div class="subtotal-div">
+    <p class="subtotal">Sub total : ₹ {{total.value}}</p>
+    <p class="GST">GST @12% : ₹ {{ (0.12 * total.value | int) | int}}</p>
+    <p class="GST">Net total : ₹ {{ (1.12 * total.value | int) | int}}</p>
+</div>
+
+<div class="end-buttons">
+    <form method="POST">
+        <a href="{{ url_for("receipt") }}" >
+        <input class="generate-receipt" type="button" value="GENERATE RECIEPT">
+        </a>
+        <input class="clear-cart" name="clear_cart" type="submit" value="CLEAR CART">
+    </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<link rel="stylesheet" type="text/css" href="{{  url_for('static', filename='/nav.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="nav-bar">
+
+    <a class="logo" href="/">
+        <img class="logo" src="{{  url_for('static', filename='images/logo.png') }}" alt="logo">
+    </a>
+
+    <div class="vertical-divider"></div>
+
+    <span class="delivering" id="delivering">
+    </span>
+    <span class="location">
+        <label>
+             Change Location:
+        <select class="location-drop-down">
+            <option value="" selected disabled hidden></option>
+            {% for city in session["acceptable_cities"] %}
+            <option value="{{city}}">{{city}}</option>
+            {% endfor %}
+        </select>
+            </label>
+    </span>
+    <a href="{{ url_for('cart') }}">
+        <span class="cart-button">
+            <img class="cart-icon" src="{{  url_for('static', filename='images/shopping-cart.png') }}" alt="cart icon">
+            <span class="cart-text-my"><b>MY</b></span>
+            <span class="cart-text-cart"><b>CART</b></span>
+        </span>
+    </a>
+</div>
+
+<script src="{{url_for('static', filename='nav.js')}}"></script>
+{% endblock %}

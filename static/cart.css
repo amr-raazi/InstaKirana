@@ -1,0 +1,110 @@
+.cart-item-body {
+
+
+    margin-top: 100px;
+
+}
+
+.cart-item {
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 10px;
+    height: 200px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+
+}
+
+.product-image {
+    float: left;
+    margin-top: 10px;
+    margin-left: 30px;
+    position: relative;
+    height: 180px;
+    width: 180px;
+
+}
+
+.product-text {
+    font-size: 20px;
+    line-height: 50px;
+    position: relative;
+    margin-top: 0;
+    margin-left: 30px;
+    font-family: "Calibri", Times, sans-serif;
+}
+
+.product-name {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.product-qty {
+    margin-left: 0;
+}
+
+.product-qty-text {
+    margin-right: 20px;
+}
+
+.increment-button, .decrement-button {
+    width: 20px;
+    border-radius: 40%;
+    border: none;
+    color: white;
+    font-size: 13px;
+    font-family: "Calibri", Times, sans-serif;
+    background-color: coral;
+}
+
+.decrement-button {
+    margin-right: 5px;
+}
+
+.increment-button {
+    margin-left: 5px;
+}
+
+.total{
+    float:right;
+    margin-right: 50px;
+    font-weight: bold;
+}
+
+.subtotal-div{
+    font-family: "Calibri", Times, sans-serif;
+    font-size: 20px;
+    float: right;
+    margin-top: 20px;
+    margin-right: 160px;
+    font-weight: bold;
+    white-space: pre-wrap;
+    line-height: 0;
+}
+
+.end-buttons{
+    margin-right: 62px;
+    clear: both;
+    height: 200px;
+}
+
+.generate-receipt, .clear-cart{
+    font-size:15px;
+    font-family: "Calibri", Times, sans-serif;
+    margin-right: 30px;
+    border:none;
+    height: 50px;
+    width: 170px;
+    margin-top: 30px;
+    float: right;
+    border-radius:25px;
+    color:white;
+}
+
+.clear-cart{
+    background-color: red;
+}
+
+.generate-receipt{
+    background-color: green;
+}

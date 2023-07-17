@@ -1,0 +1,29 @@
+{% include 'nav.html' %}
+{% extends 'base.html' %}
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{{  url_for('static', filename='/main.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="item-body">
+    <b><h1 class="heading-text">Daily Essentials</h1></b>
+    {% for id in range(0, 12) %}
+    {% if id == 6 %}
+    <b><h1 class="heading-text">Cold Drinks and Juices</h1></b>
+    {% endif %}
+    <a href=" {{ url_for( "item", id=id)}} ">
+    <div class="item" id={{id}}>
+        <img class="item-image" src=" {{ url_for('static', filename='/images/products/'~id~'.png') }} ">
+        <p class="product-name"> {{session["items"][id]["name"] }}</p>
+        <span class="product-size"><b>{{ session["items"][id]["size"] }}</b></span>
+
+        <div class="product-price-background">
+            <span class="product-price">₹ {{ session["items"][id]["price"] }}</span>
+        </div>
+    </div>
+    </a>
+    {% endfor %}
+
+</div>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% include 'nav.html' %}
+{% extends 'base.html' %}
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{{  url_for('static', filename='/item.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="item-body">
+
+    <img class="product-image" src="{{ url_for("static", filename="images/products/"~id~".png") }}">
+
+    <p class="product-text" id="product-name">{{ session["items"][id]["name"] }}</p>
+    <br>
+
+
+    <span class="product-text" id="product-size">{{ session["items"][id]["size"] }}</span>
+
+    <span class="product-text" id="product-price"> ₹ {{ session["items"][id]["price"] }}</span>
+    <br>
+
+    <span class="product-text" id="product-description">
+        {% if id < 6 %}
+        Get Daily Essentials delivered to <br>your doorstep in 20 minutes or less!
+        {% else %}
+        Hassle free Cold Drinks <br> in 20 minutes or less!
+        {% endif %}
+    </span>
+    <form method="POST">
+        <select id="qty-drop-down" name="qty_add">
+            <option value=" " selected disabled hidden>Quantity</option>
+            {% for x in range(1, 6) %}
+            <option value="{{x}}">{{x}}</option>
+            {% endfor %}
+        </select>
+        <input id="add-qty-button" type="submit" value="  Add to Cart  ">
+    </form>
+</div>
+{% endblock %}

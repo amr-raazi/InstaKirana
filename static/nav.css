@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+
+}
+
+
+.nav-bar {
+    white-space: nowrap;
+    padding-left: 0.78125%;
+    padding-right: 1.5625%;
+    height: 80px;
+    background-color: black;
+}
+
+.logo {
+    height: 80px;
+    width: 313px;
+}
+
+.vertical-divider {
+    display: inline;
+    border-right: 2px solid white;
+    height: 55px;
+    position: absolute;
+    top: 13px;
+    left: 360px;
+}
+
+.cart-button, .location, .delivering {
+    position: absolute;
+    font-family: "Calibri", Times, sans-serif;
+    color: white;
+}
+
+.delivering {
+    left: 400px;
+    top: 15px;
+    font-size: 20px;
+}
+
+.location {
+    left: 400px;
+    top: 40px;
+    font-size: 20px;
+}
+
+
+.location-drop-down {
+    font-family: "Calibri", Times, sans-serif;
+    background-color: DodgerBlue;
+    font-size: 14px;
+    border: none;
+}
+
+
+.cart-button {
+    border-radius: 25px;
+    position: absolute;
+    display: inline;
+    height: 60px;
+    width: 180px;
+    top: 10px;
+    left: 1705px;
+    background-color: green;
+}
+
+.cart-icon {
+
+    height: 70px;
+    width: 80px;
+    position: relative;
+    display: inline;
+    left: 81px;
+}
+
+
+.cart-text-my {
+    font-family: "Calibri", Times, sans-serif;
+    position: absolute;
+    left: 36px;
+    top: 10px;
+    font-size: 20px;
+}
+
+.cart-text-cart {
+    position: absolute;
+    font-family: "Calibri", Times, sans-serif;
+    left: 27px;
+    top: 30px;
+    font-size: 20px;
+}

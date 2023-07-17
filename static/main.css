@@ -1,0 +1,59 @@
+a {
+    color: white;
+}
+
+.item-body {
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-top: 2%;
+}
+
+.heading-text {
+    font-family: "Calibri", Times, sans-serif;
+    font-size: 30px;
+}
+
+.item {
+    border-radius: 40px;
+    padding: 10px;
+    margin: 20px;
+    display: inline-block;
+    width: 220px;
+    height: 260px;
+    border: 2px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, .5);
+}
+.item:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.item-image {
+    width: 180px;
+    height: 180px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.product-name, .product-size, .product-price {
+    color: black;
+    font-family: "Calibri", Times, sans-serif;
+    font-size: 18px;
+    padding-left: 25px;
+    padding-right: 10px;
+}
+
+.product-price-background {
+    margin-right: 5px;
+    width: 90px;
+    float: right;
+    display: inline;
+    background-color: green;
+    position: relative;
+    border-radius: 100px;
+}
+
+.product-price {
+    float: right;
+    color: white;
+}

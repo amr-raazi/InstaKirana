@@ -1,0 +1,11 @@
+{% include 'nav.html' %}
+{% extends 'base.html' %}
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{{  url_for('static', filename='/empty cart.css') }}">
+{% endblock %}
+
+{% block body %}
+<img class="empty-cart-image" src="{{ url_for("static", filename="images/empty-cart.png") }}">
+<p class="empty-cart-text">Your cart seems to be empty at the moment!</p>
+{% endblock %}
