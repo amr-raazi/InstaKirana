@@ -1,4 +1,4 @@
-.empty-cart-image {
+.empty-image {
     position: absolute;
     margin: auto;
     top: 0;
@@ -7,7 +7,7 @@
     bottom: 200px;
 }
 
-.empty-cart-text{
+.empty-text{
     font-family: "Calibri", Times, sans-serif;
     font-size: 30px;
     text-align: center;

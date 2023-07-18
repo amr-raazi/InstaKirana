@@ -40,6 +40,8 @@ def cart():
 
 @app.route("/receipt")
 def receipt():
+    if session["qty_dict"] == {}:
+        return render_template("empty receipt.html")
     helper.init_vars(session)
     return render_template("receipt.html")
 
