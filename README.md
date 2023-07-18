@@ -1,6 +1,6 @@
 <h1>InstaKirana</h1>
 
-E-Commerce Website made in 3 days for a school exhibition 
+<h3> E-Commerce Website made in 3 days for a school exhibition </h3>
 
 <ul>
 <li>Flask back end</li>
