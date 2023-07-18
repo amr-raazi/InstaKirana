@@ -1,0 +1,36 @@
+.home {
+    height: 150px;
+    width: 150px;
+}
+
+.receipt-body {
+    margin: 50px 200px 200px;
+    border: 3px solid black;
+    overflow:auto;
+}
+
+.receipt-text {
+    font-family: "Calibri", Times, sans-serif;
+    font-size: 20px;
+    margin-left: 5px;
+}
+
+.receipt-header{
+    font-size:25px;
+    text-decoration: underline;
+}
+
+.receipt-item{
+    margin-top: 20px;
+}
+.receipt-qty, .receipt-item-total, .receipt-subtotal-div{
+    float: right;
+    margin-right: 100px;
+}
+
+
+.receipt-subtotal-div{
+    line-height: 5px;
+    font-weight: bold;
+    margin-top: 50px;
+}

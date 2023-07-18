@@ -5,4 +5,44 @@
 {% endblock %}
 
 {% block body %}
+<a href="/">
+    <img class="home" src="{{  url_for('static', filename='images/home.png') }}" alt="logo">
+</a>
+<div class="receipt-body">
+
+    <div class="receipt-text receipt-header" id="location">
+        <script>
+            document.getElementById("location").innerHTML = localStorage.getItem('location')
+        </script>
+    </div>
+
+    <div class="receipt-text receipt-header" id="date">
+        <script>
+            const d = new Date();
+            document.getElementById("date").innerHTML = d.getDate() + "." + (d.getMonth() + 1) + "." + (d.getFullYear());
+        </script>
+    </div>
+
+    {% set total = namespace(value=0) %}
+    {% for id, qty in session["qty_dict"].items() %}
+    <div class="receipt-item">
+        <div>
+            <span class="receipt-text receipt-name">{{ session["items"][id | int]["name"] }}</span>
+            <span class="receipt-text receipt-qty">Qty  : {{ qty }}</span>
+        </div>
+        <div>
+            <span class="receipt-text receipt-size">{{ session["items"][id | int]["size"] }}</span>
+            <span class="receipt-text receipt-price">₹ {{ session["items"][id | int]["price"] }}</span>
+            <span class="receipt-text receipt-item-total">Total : ₹{{ qty * session["items"][id | int]["price"]}}</span>
+        </div>
+        {% set total.value = (total.value + ( qty * session["items"][id | int]["price"] ) ) %}
+    </div>
+    {% endfor %}
+
+    <div class="receipt-subtotal-div">
+        <p class="receipt-text receipt-subtotal">Sub-total : ₹ {{total.value}}</p>
+        <p class="receipt-text receipt-subtotal">GST @12% : ₹ {{ (0.12 * total.value | int) | int}}</p>
+        <p class="receipt-text receipt-subtotal">Net total : ₹ {{ (1.12 * total.value | int) | int}}</p>
+    </div>
+</div>
 {% endblock %}
