@@ -2,11 +2,12 @@
 
 <h3> E-Commerce Website made in 3 days for a school exhibition </h3>
 
+No further commits planned
 <ul>
 <li>Flask back end</li>
 <li>HTML + CSS (sort of janky at places)</li>
 <li>Minimal Jquery and JS</li>
-<li>Optimized only for 1920 x 1080</li>
+<li>CSS Optimized only for 1920 x 1080</li>
 </ul>
 
 ![home.png](static/images/readme images/home.png)
