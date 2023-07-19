@@ -1,6 +1,5 @@
 body {
     margin: 0;
-
 }
 
 
@@ -88,4 +87,17 @@ body {
     left: 27px;
     top: 30px;
     font-size: 20px;
+}
+
+.footer {
+    background-color: black;
+    text-align: center;
+    color: white;
+    font-family: "Calibri", Times, sans-serif;
+    font-size: 14px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    height: 35px;
+    z-index:1000000;
 }
