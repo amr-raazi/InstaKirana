@@ -10,7 +10,7 @@ No further commits planned
 <li>CSS Optimized only for 1920 x 1080</li>
 </ul>
 
-![home.png](static/images/readme images/home.png)
+![home.png](static/images/readme images/home.png) 
 ![item 1.png](static/images/readme images/item 1.png)
 ![item 2.png](static/images/readme images/item 2.png)
 ![empty cart.png](static/images/readme images/empty cart.png)
