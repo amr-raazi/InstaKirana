@@ -10,9 +10,9 @@ No further commits planned
 <li>CSS Optimized for 1920 x 1080 due to scarcity of time</li>
 </ul>
 
-![home.png](static/images/readme images/home.png) 
-![item 1.png](static/images/readme images/item 1.png)
-![item 2.png](static/images/readme images/item 2.png)
-![empty cart.png](static/images/readme images/empty cart.png)
-![cart.png](static/images/readme images/cart.png)
-![receipt.png](static/images/readme images/receipt.png)
+<img alt="home.png" src="static/images/readme images/home.png"/>
+<img alt="item 1.png" src="static/images/readme images/item 1.png"/>
+<img alt="item 2.png" src="static/images/readme images/item 2.png"/>
+<img alt="empty cart.png" src="static/images/readme images/empty cart.png"/>
+<img alt="cart.png" src="static/images/readme images/cart.png"/>
+<img alt="receipt.png" src="static/images/readme images/receipt.png"/>
