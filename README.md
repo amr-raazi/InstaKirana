@@ -5,7 +5,7 @@
 No further commits planned
 <ul>
 <li>Flask back end</li>
-<li>HTML + CSS (sort of janky at places)</li>
+<li>HTML + CSS</li>
 <li>Minimal Jquery and JS</li>
 <li>CSS Optimized only for 1920 x 1080</li>
 </ul>
