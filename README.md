@@ -7,7 +7,7 @@ No further commits planned
 <li>Flask back end</li>
 <li>HTML + CSS</li>
 <li>Minimal Jquery and JS</li>
-<li>CSS Optimized only for 1920 x 1080</li>
+<li>CSS Optimized for 1920 x 1080 due to scarcity of time</li>
 </ul>
 
 ![home.png](static/images/readme images/home.png) 
